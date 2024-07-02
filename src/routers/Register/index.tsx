@@ -1,6 +1,7 @@
 import { useState } from "react"
 import api from "../../api/api"
 import style from './style.module.scss'
+import { useNavigate } from "react-router-dom"
 
 
 export default function RegisterUser(){
@@ -9,6 +10,8 @@ export default function RegisterUser(){
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState<string | null>(null);
+
+    const navigate = useNavigate()
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -20,8 +23,11 @@ export default function RegisterUser(){
                 password
             })
 
+            const userId = response.data.response._id
             setMessage(response.data.msg);
             console.log(message);
+
+            navigate(`/profile/${userId}`)
 
             setName('');
             setLastName('');
