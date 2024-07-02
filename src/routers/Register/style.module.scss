@@ -1,12 +1,15 @@
+@import '../../../style/color.module.scss';
+
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 65px;
+    background-color: $primary-color;
+    padding: 35px;
     border-radius: 15px;
-}
+    border: 2px solid black;
+    box-shadow: 6px 6px 10px 0px #0000006b;}
 .title{
     text-align: center;
     margin-bottom: 45px;
@@ -20,25 +23,39 @@
     margin-bottom: 5px;
     font-size: 25px;
     padding-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
 }
 .input{
-    width: 350px;
+    width: 400px;
     font-size: 20px;
     height: 35px;
     padding-left: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+
+    &:focus{
+        outline: none;
+    }
+
+    &::placeholder{
+        color: rgb(148, 146, 146);
+    }
 }
 .btn{
-    background-color: rgb(224, 209, 159);
+    background-color: white;
     padding: 10px;
     font-size: 20px;
     width: 200px;
     margin-top: 10px;
-    border: none;
     border-radius: 10px;
     transition: 0.5s;
+    border: 2px solid transparent;
+    font-weight: bold;
 
     &:hover{
-        scale: 1.02;
-        background-color: rgba(224, 209, 159, 0.89);;
+        scale: 1.08;
+        border: 2px solid black;
     }
 }
