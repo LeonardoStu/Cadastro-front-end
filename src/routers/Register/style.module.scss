@@ -8,7 +8,6 @@
     background-color: $primary-color;
     padding: 35px;
     border-radius: 15px;
-    border: 2px solid black;
     box-shadow: 6px 6px 10px 0px #0000006b;}
 .title{
     text-align: center;
@@ -26,6 +25,7 @@
     padding-left: 5px;
     margin-right: 5px;
     font-weight: bold;
+    color: $word-color;
 }
 .input{
     width: 400px;
