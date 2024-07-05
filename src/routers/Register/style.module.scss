@@ -1,5 +1,33 @@
 @import '../../../style/color.module.scss';
 
+.container{
+    min-height: 100vh;
+    min-width: 100vh;
+}
+.header{
+    padding: 50px;
+    text-align: end;
+}
+.btnLogin{
+    background-color: $primary-color;
+    padding: 10px;
+    font-size: 20px;
+    width: 200px;
+    height: 60px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    border: 2px solid transparent;
+
+    &:hover{
+        border: 2px solid black;    
+    }
+}
+.formDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
 .form{
     display: flex;
     flex-direction: column;
@@ -7,8 +35,9 @@
     align-items: center;
     background-color: $primary-color;
     padding: 35px;
-    border-radius: 15px;
-    box-shadow: 6px 6px 10px 0px #0000006b;}
+    border-radius: 13px;
+    box-shadow: 6px 6px 10px 0px #0000006b;
+}
 .title{
     text-align: center;
     margin-bottom: 45px;
@@ -24,7 +53,6 @@
     font-size: 25px;
     padding-left: 5px;
     margin-right: 5px;
-    font-weight: bold;
     color: $word-color;
 }
 .input{
@@ -49,14 +77,13 @@
     padding: 10px;
     font-size: 20px;
     width: 200px;
+    height: 60px;
     margin-top: 10px;
     border-radius: 10px;
     transition: 0.5s;
     border: 2px solid transparent;
-    font-weight: bold;
 
     &:hover{
-        scale: 1.08;
         border: 2px solid black;
     }
 }
