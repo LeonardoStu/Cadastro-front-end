@@ -1,0 +1,80 @@
+@import '../../../style/color.module.scss';
+
+.container{
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url($background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.arrow{
+    margin-right: 380px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.arrow_left{
+    width: 30px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    padding: 35px;
+    border-radius: 13px;
+    box-shadow: 6px 6px 10px 0px #0000006b;
+}
+.title{
+    text-align: center;
+    margin-bottom: 45px;
+    color: $word-color;
+}
+.divInput{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.label{
+    margin-bottom: 5px;
+    font-size: 25px;
+    padding-left: 5px;
+    margin-right: 5px;
+    color: $word-color;
+}
+.input{
+    width: 400px;
+    font-size: 20px;
+    height: 35px;
+    padding: 20px 15px 20px 5px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+
+    &:focus{
+        outline: none;
+    }
+
+    &::placeholder{
+        color: rgb(148, 146, 146);
+    }
+}
+.btn{
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 200px;
+    height: 60px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    border: 2px solid transparent;
+
+    &:hover{
+        border: 2px solid black;
+    }
+}
