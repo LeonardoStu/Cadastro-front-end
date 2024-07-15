@@ -1,0 +1,70 @@
+@import '../../../style/color.module.scss';
+
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url($background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form{
+    background-color: $primary-color;
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+.divInput{
+    width: auto;
+    height: 80px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.label{
+    font-size: 25px;
+    width: 230px;
+}
+.input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 23px;
+    background-color: transparent;
+    transition: 0.7s;
+    &:focus{
+        outline: none;
+        scale: 1.02;
+    }
+}
+.divBtn{
+    margin-top: 10px;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    transition: 0.7s;
+
+    &:hover{
+        background-color: rgb(216, 216, 216);
+        scale: 1.01;
+    }
+}

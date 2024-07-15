@@ -24,7 +24,8 @@
     box-shadow: 1px 3px 10px 0px #0000006b;
 
     &:hover{
-        border: 2px solid black;    
+        background-color: rgb(224, 0, 0);
+        scale: 1.01;
     }
 }
 .formDiv{
@@ -88,6 +89,7 @@
     border: 2px solid transparent;
 
     &:hover{
-        border: 2px solid black;
+        background-color: rgb(216, 216, 216);
+        scale: 1.01;
     }
 }

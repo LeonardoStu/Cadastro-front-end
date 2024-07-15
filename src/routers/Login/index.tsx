@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom"
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState<string | null>(null)
 
     const navigate = useNavigate()
 
@@ -22,6 +22,7 @@ export default function Login() {
 
             const userId = response.data.user.id
 
+            
             navigate(`/profile/${userId}`)
         } catch (error: any) {
             setMessage(error.response.data.msg)

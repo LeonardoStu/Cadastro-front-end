@@ -24,6 +24,7 @@ export default function RegisterUser(){
             })
 
             const userId = response.data.response._id
+            sessionStorage.setItem('token', response.data.token)
 
             navigate(`/profile/${userId}`)
 
