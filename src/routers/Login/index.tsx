@@ -1,12 +1,14 @@
-import { useState } from "react"
 import api from '../../api/api'
-import { Link, useNavigate } from "react-router-dom"
 import style from './style.module.scss'
+import { useState } from "react"
+import { FaArrowLeft } from "react-icons/fa"
+import { Link, useNavigate } from "react-router-dom"
 
 
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [message, setMessage] = useState('')
 
     const navigate = useNavigate()
 
@@ -21,9 +23,8 @@ export default function Login() {
             const userId = response.data.user.id
 
             navigate(`/profile/${userId}`)
-            console.log('Login bem sucedido')
-        } catch (error) {
-            console.log(error)
+        } catch (error: any) {
+            setMessage(error.response.data.msg)
         }
     }
 
@@ -31,7 +32,7 @@ export default function Login() {
         <div className={style.container}>
             <div className={style.arrow}>
                 <Link to='/register'>
-                    <img src="/seta_esquerda.png" alt="arrow_left" className={style.arrow_left}/>
+                    <FaArrowLeft style={{height:'30px', width:'30px', color:'#424242'}} />
                 </Link>
             </div>
             <form onSubmit={handleLogin} className={style.form}>
@@ -50,8 +51,12 @@ export default function Login() {
                     <input className={style.input} type="password" id="password" placeholder="digite sua senha" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                 </div>
 
+                    <div style={{color:'white', margin:'10px', height:'20px'}}>
+                        {message && <p> {message} </p>}
+                    </div>
+
                 <div>
-                    <button className={style.btn}>Entrar</button>
+                    <button type='submit' className={style.btn}>Entrar</button>
                 </div>
             </form>
         </div>

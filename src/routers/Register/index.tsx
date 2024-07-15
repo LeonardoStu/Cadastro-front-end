@@ -24,8 +24,6 @@ export default function RegisterUser(){
             })
 
             const userId = response.data.response._id
-            setMessage(response.data.msg);
-            console.log(message);
 
             navigate(`/profile/${userId}`)
 
@@ -33,8 +31,8 @@ export default function RegisterUser(){
             setLastName('');
             setEmail('');
             setPassword('');
-        } catch (error) {
-            console.log(error)
+        } catch (error: any) {
+            setMessage(error.response.data.msg)
         }
 
 
@@ -71,6 +69,7 @@ export default function RegisterUser(){
                         {/* email */}
                         <label className={style.label} htmlFor="email">Email</label>
                         <input className={style.input} type="email" id="email" placeholder="digite seu email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                        {message && <p style={{margin:'5px', color:'white'}}>{message}</p>}
                     </div>
 
                     <div className={style.divInput}>
