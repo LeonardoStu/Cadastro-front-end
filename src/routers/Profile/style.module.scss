@@ -9,6 +9,8 @@
     background-image: url($background-image);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 .form{
     background-color: $primary-color;
@@ -66,5 +68,10 @@
     &:hover{
         background-color: rgb(216, 216, 216);
         scale: 1.01;
+    }
+}
+@media(max-width: 900px){
+    .form{
+        width: 90%;
     }
 }

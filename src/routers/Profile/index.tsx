@@ -72,30 +72,28 @@ export default function Profile(){
 
     return <>
         <div className={style.container}>
-            <div>
-                <form onSubmit={handleSubmit} className={style.form}>
-                    <div className={style.divInput}>
-                        {/* firstname */}
-                        <label className={style.label} htmlFor="name">Nome:</label>
-                        <input className={style.input} type="text" id="name" placeholder="Digite seu nome" value={name} onChange={(e) => setName(e.target.value)} required/>
-                    </div>
+            <form onSubmit={handleSubmit} className={style.form}>
+                <div className={style.divInput}>
+                    {/* firstname */}
+                    <label className={style.label} htmlFor="name">Nome:</label>
+                    <input className={style.input} type="text" id="name" placeholder="Digite seu nome" value={name} onChange={(e) => setName(e.target.value)} required/>
+                </div>
 
-                    <div className={style.divInput}>
-                        {/* lastname */}
-                        <label className={style.label} htmlFor="lastname">Sobrenome:</label>
-                        <input className={style.input} type="text" id="lastname" placeholder="digite seu sobrenome" value={lastName} onChange={(e) => setLastName(e.target.value)} required/>
-                    </div>
+                <div className={style.divInput}>
+                    {/* lastname */}
+                    <label className={style.label} htmlFor="lastname">Sobrenome:</label>
+                    <input className={style.input} type="text" id="lastname" placeholder="digite seu sobrenome" value={lastName} onChange={(e) => setLastName(e.target.value)} required/>
+                </div>
 
-                    <div style={{height:'20px', color:'white'}}>
-                        {message && <p>{message}</p>}
-                    </div>
+                <div style={{height:'20px', color:'white'}}>
+                    {message && <p>{message}</p>}
+                </div>
 
-                    <div className={style.divBtn}>
-                        <button className={style.btn}>Editar</button>
-                        <button className={style.btn} onClick={UserDelete} type='button'>Excluir</button>
-                    </div>
-                </form>
-            </div>
+                <div className={style.divBtn}>
+                    <button className={style.btn}>Editar</button>
+                    <button className={style.btn} onClick={UserDelete} type='button'>Excluir</button>
+                </div>
+            </form>
         </div>
     </>
 }
